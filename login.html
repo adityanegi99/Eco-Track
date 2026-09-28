@@ -1,0 +1,45 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoTrack - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head><body><div class="login-page">
+
+    <!-- Top Logo -->
+    <div class="login-brand">
+        🌱 EcoTrack
+    </div>
+
+    <!-- Center Login Card -->
+    <div class="login-card">
+
+        <div class="login-logo">🌱</div>
+
+        <h1>Welcome to EcoTrack</h1>
+
+        <p>Smart Waste Management for Your Campus</p>
+
+        <label>CU ID</label>
+        <input type="text" id="cuId" placeholder="Enter your CU ID">
+
+        <label>Password</label>
+        <div class="password-box">
+    <input type="password" id="password" placeholder="Enter your password">
+    <button type="button" onclick="togglePassword()" class="eye-btn">👁</button>
+</div>
+
+        <button class="btn login-btn" onclick="loginUser()">
+            Login
+        </button>
+
+        <p id="loginMessage"></p>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

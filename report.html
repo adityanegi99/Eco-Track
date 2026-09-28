@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoTrack - Report Waste</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">🌱 EcoTrack</div>
+
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="report.html">Report Waste</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="classifier.html">Classifier</a>
+            <a href="sdg.html">SDGs</a>
+            <a href="challenges.html">Challenges</a>
+        </div>
+    </nav>
+
+    <!-- Report Waste -->
+    <section class="section report-section">
+
+        <div class="report-content">
+
+            <div>
+                <h2>Report Waste</h2>
+                <p>Found waste on campus? Report it quickly.</p>
+
+                <div class="form-card">
+
+                    <label>Waste Type</label>
+
+                    <select id="wasteType">
+                        <option value="">Select waste type</option>
+                        <option>Plastic</option>
+                        <option>Paper</option>
+                        <option>Glass</option>
+                        <option>Metal</option>
+                        <option>E-Waste</option>
+                        <option>Organic</option>
+                    </select>
+
+                    <label>Location</label>
+
+                    <select id="location">
+                        <option value="">Select location</option>
+                        <option>Canteen</option>
+                        <option>Classroom</option>
+                        <option>Library</option>
+                        <option>Parking Area</option>
+                        <option>Garden</option>
+                        <option>Other</option>
+                    </select>
+
+                    <label>Waste Photo</label>
+
+                    <input type="file"
+                           id="wastePhoto"
+                           accept="image/*"
+                           capture="environment">
+
+                    <label>Description</label>
+
+                    <textarea id="description"
+                        placeholder="Describe the waste problem..."></textarea>
+
+                    <button class="btn" onclick="submitReport()">
+                        Submit Report
+                    </button>
+
+                    <p id="reportMessage"></p>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Right Information -->
+        <div class="report-info">
+
+            <div class="info-icon">♻️</div>
+
+            <h3>Help Keep Our Campus Clean</h3>
+
+            <p>
+                Your report helps identify waste problems
+                and supports better waste management.
+            </p>
+
+            <div class="info-steps">
+                <div>
+                    <strong>01</strong>
+                    <span>Select the waste type</span>
+                </div>
+
+                <div>
+                    <strong>02</strong>
+                    <span>Choose the location</span>
+                </div>
+
+                <div>
+                    <strong>03</strong>
+                    <span>Add a waste photo</span>
+                </div>
+
+                <div>
+                    <strong>04</strong>
+                    <span>Submit your report</span>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 EcoTrack | Smart Waste Management</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

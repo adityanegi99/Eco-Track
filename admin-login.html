@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoTrack - Admin Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="login-page">
+
+        <div class="login-brand">
+            🌱 EcoTrack Admin
+        </div>
+
+        <div class="login-card">
+
+            <div class="login-logo">🔐</div>
+
+            <h1>Admin Login</h1>
+
+            <p>Secure access to EcoTrack Admin Panel</p>
+
+            <label>Admin ID</label>
+
+            <input type="text"
+                   id="adminId"
+                   placeholder="Enter Admin ID">
+
+            <label>Password</label>
+
+            <div class="password-box">
+
+                <input type="password"
+                       id="adminPassword"
+                       placeholder="Enter your password">
+
+                <button type="button"
+                        onclick="toggleAdminPassword()"
+                        class="eye-btn">
+                    👁
+                </button>
+
+            </div>
+
+            <button class="btn login-btn"
+                    onclick="adminLogin()">
+                Admin Login
+            </button>
+
+            <p id="adminLoginMessage"></p>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

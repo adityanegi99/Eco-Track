@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoTrack - Challenges</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">🌱 EcoTrack</div>
+
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="report.html">Report Waste</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="classifier.html">Classifier</a>
+            <a href="sdg.html">SDGs</a>
+            <a href="challenges.html">Challenges</a>
+        </div>
+    </nav>
+
+
+    <section class="section">
+
+        <div class="sdg-header">
+
+            <span class="hero-tag">
+                🏆 Earn Points & Badges
+            </span>
+
+            <h2>
+                Eco Challenges
+            </h2>
+
+            <p>
+                Complete one waste report each day and build a cleaner campus.
+            </p>
+
+        </div>
+
+
+        <div class="sdg-cards">
+
+
+            <!-- CHALLENGE CARD -->
+
+            <div class="sdg-card">
+
+                <div class="sdg-number" id="dayNumber">
+                    1
+                </div>
+
+                <h3>
+                    7-Day Cleanliness Challenge
+                </h3>
+
+                <h4 id="dayTitle">
+                    Day 1 of 7
+                </h4>
+
+                <p id="dayTask">
+                    Submit a waste report today to complete today's challenge.
+                </p>
+
+                <span class="sdg-tag">
+                    ⭐ 50 Points on Completion
+                </span>
+
+                <br><br>
+
+                <div id="challengeStatus">
+                    📋 Submit a waste report to complete today's challenge.
+                </div>
+
+                <p id="challengeMessage"></p>
+
+                <div id="progressText">
+                    Progress: 0 / 7 Days
+                </div>
+
+            </div>
+
+
+            <!-- POINTS CARD -->
+
+            <div class="sdg-card">
+
+                <div class="sdg-number">
+                    🏅
+                </div>
+
+                <h3>
+                    Your Eco Points
+                </h3>
+
+                <h4 id="ecoPoints">
+                    0 Points
+                </h4>
+
+                <p>
+                    Earn points by completing EcoTrack challenges.
+                </p>
+
+                <span class="sdg-tag">
+                    🌱 Keep Going!
+                </span>
+
+                <br><br>
+
+                <div id="badgeArea">
+                    🏆 Badge: Not Earned
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        <p>
+            © 2026 EcoTrack | Smart Waste Management
+        </p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+    <script>
+
+        // ==========================================
+        // GET LOGGED-IN STUDENT
+        // ==========================================
+
+        const studentCuId =
+            localStorage.getItem("studentCuId") || "GUEST";
+
+
+        // ==========================================
+        // STUDENT-SPECIFIC STORAGE
+        // ==========================================
+
+        const pointsKey =
+            "ecoPoints_" + studentCuId;
+
+        const dayKey =
+            "challengeDay_" + studentCuId;
+
+        const finishedKey =
+            "challengeFinished_" + studentCuId;
+
+        const lastDateKey =
+            "challengeLastDate_" + studentCuId;
+
+
+        // ==========================================
+        // LOAD STUDENT DATA
+        // ==========================================
+
+        let points =
+            Number(localStorage.getItem(pointsKey)) || 0;
+
+        let currentDay =
+            Number(localStorage.getItem(dayKey)) || 1;
+
+        let challengeFinished =
+            localStorage.getItem(finishedKey) === "true";
+
+        let lastCompletedDate =
+            localStorage.getItem(lastDateKey) || "";
+
+
+        // ==========================================
+        // DAILY TASKS
+        // ==========================================
+
+        const dayTasks = [
+
+            "Submit a waste report for a waste problem you find.",
+
+            "Submit a report and help identify recyclable waste.",
+
+            "Submit a report and help reduce unnecessary plastic waste.",
+
+            "Submit a report and help keep your campus area clean.",
+
+            "Submit a report and identify dry or wet waste correctly.",
+
+            "Submit a report and encourage responsible waste management.",
+
+            "Submit your final report and complete the 7-day challenge."
+
+        ];
+
+
+        // ==========================================
+        // TODAY
+        // ==========================================
+
+        function getToday() {
+
+            const today = new Date();
+
+            return today.getFullYear() +
+                "-" +
+                String(today.getMonth() + 1).padStart(2, "0") +
+                "-" +
+                String(today.getDate()).padStart(2, "0");
+        }
+
+
+        // ==========================================
+        // UPDATE CHALLENGE DISPLAY
+        // ==========================================
+
+        function updateChallenge() {
+
+            const today =
+                getToday();
+
+
+            // ======================================
+            // CHALLENGE COMPLETED
+            // ======================================
+
+            if (challengeFinished) {
+
+                document.getElementById("dayNumber").textContent =
+                    "🏆";
+
+                document.getElementById("dayTitle").textContent =
+                    "Challenge Completed!";
+
+                document.getElementById("dayTask").textContent =
+                    "You completed all 7 days successfully.";
+
+                document.getElementById("challengeStatus").textContent =
+                    "🎉 7-Day Challenge completed!";
+
+                document.getElementById("progressText").textContent =
+                    "Progress: 7 / 7 Days";
+
+                document.getElementById("badgeArea").textContent =
+                    "🏆 Badge Earned: Clean Campus Champion";
+
+                return;
+            }
+
+
+            // ======================================
+            // NORMAL CHALLENGE
+            // ======================================
+
+            document.getElementById("dayNumber").textContent =
+                currentDay;
+
+            document.getElementById("dayTitle").textContent =
+                "Day " + currentDay + " of 7";
+
+            document.getElementById("dayTask").textContent =
+                dayTasks[currentDay - 1];
+
+            document.getElementById("progressText").textContent =
+                "Progress: " + (currentDay - 1) + " / 7 Days";
+
+            document.getElementById("badgeArea").textContent =
+                "🏆 Badge: Not Earned";
+
+
+            // ======================================
+            // REPORT ALREADY SUBMITTED TODAY
+            // ======================================
+
+            if (lastCompletedDate === today) {
+
+                document.getElementById("challengeStatus").textContent =
+                    "✅ Today's challenge completed!";
+
+                document.getElementById("challengeMessage").textContent =
+                    "🌱 Come back tomorrow for Day " +
+                    currentDay + ".";
+
+                return;
+            }
+
+
+            // ======================================
+            // WAITING FOR REPORT
+            // ======================================
+
+            document.getElementById("challengeStatus").textContent =
+                "📋 Submit a waste report to complete today's challenge.";
+
+            document.getElementById("challengeMessage").textContent =
+                "Your Day " + currentDay + " challenge is waiting.";
+        }
+
+
+        // ==========================================
+        // START NEW CHALLENGE
+        // ==========================================
+
+        function startNewChallenge() {
+
+            currentDay = 1;
+
+            challengeFinished = false;
+
+            // The student already completed Day 7 today.
+            // Therefore the new Day 1 starts tomorrow.
+
+            lastCompletedDate =
+                getToday();
+
+
+            localStorage.setItem(
+                dayKey,
+                1
+            );
+
+            localStorage.setItem(
+                finishedKey,
+                "false"
+            );
+
+            localStorage.setItem(
+                lastDateKey,
+                lastCompletedDate
+            );
+
+
+            updateChallenge();
+        }
+
+
+        // ==========================================
+        // INITIAL DISPLAY
+        // ==========================================
+
+        document.getElementById("ecoPoints").textContent =
+            points + " Points";
+
+        updateChallenge();
+
+    </script>
+
+</body>
+
+</html>

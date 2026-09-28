@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoTrack - Admin Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">🌱 EcoTrack Admin</div>
+
+        <div class="nav-links">
+            <a href="admin-home.html">Home</a>
+            <a href="admin-dashboard.html">Dashboard</a>
+            <a href="admin.html">Reports</a>
+        </div>
+    </nav>
+
+    <section class="section admin-section">
+
+        <h2>Welcome to EcoTrack Admin</h2>
+
+        <p>
+            Manage campus waste reports and monitor sustainability activities.
+        </p>
+
+        <div class="stats">
+
+            <div class="stat-card">
+                <h3 id="totalReports">0</h3>
+                <p>Total Reports</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="plasticReports">0</h3>
+                <p>Plastic Reports</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="recycledReports">0</h3>
+                <p>E-Waste Reports</p>
+            </div>
+
+        </div>
+
+        <div class="form-card">
+
+            <h3>Admin Actions</h3>
+
+            <p>📋 Review student waste reports</p>
+            <p>📊 Monitor waste statistics</p>
+            <p>♻️ Manage waste report status</p>
+
+            <a href="admin.html" class="btn">
+                View All Reports
+            </a>
+
+            <br><br>
+
+            <button class="btn"
+                    onclick="clearAllReports()"
+                    style="background:#dc2626;">
+                🗑️ Clear All Test Reports
+            </button>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 EcoTrack | Admin Panel</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

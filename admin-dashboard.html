@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoTrack - Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Admin Navigation -->
+    <nav>
+        <div class="logo">🌱 EcoTrack Admin</div>
+
+        <div class="nav-links">
+            <a href="admin-home.html">Home</a>
+            <a href="admin-dashboard.html">Dashboard</a>
+            <a href="admin.html">Reports</a>
+        </div>
+    </nav>
+
+    <!-- Admin Dashboard -->
+    <section class="section admin-section">
+
+        <h2>Admin Dashboard</h2>
+
+        <p>Overview of campus waste management activity.</p>
+
+        <div class="stats">
+
+            <div class="stat-card">
+                <h3 id="totalReports">0</h3>
+                <p>Total Reports</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="plasticReports">0</h3>
+                <p>Plastic Reports</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="recycledReports">0</h3>
+                <p>E-Waste Reports</p>
+            </div>
+
+        </div>
+
+        <div class="form-card">
+
+            <h3>Admin Overview</h3>
+
+            <p>📋 View and manage student reports.</p>
+            <p>📊 Monitor waste categories.</p>
+            <p>♻️ Track waste management progress.</p>
+
+            <a href="admin.html" class="btn">
+                Manage Reports
+            </a>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 EcoTrack | Admin Panel</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoTrack - Waste Classifier</title>
+    <link rel="stylesheet" href="style.css">
+</head><body><!-- Navigation -->
+<nav>
+    <div class="logo">🌱 EcoTrack</div>
+
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="report.html">Report Waste</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="classifier.html">Classifier</a>
+        <a href="sdg.html">SDGs</a>
+        <a href="challenges.html">Challenges</a>
+    </div>
+</nav>
+
+<!-- Waste Classifier -->
+<section class="section classifier-section">
+
+    <div class="classifier-layout">
+
+        <!-- Left Side -->
+        <div class="classifier-main">
+
+            <span class="hero-tag">♻️ Smart Waste Guide</span>
+
+            <h2>Waste Classifier</h2>
+
+            <p>
+                Select a waste item to find the correct
+                disposal method.
+            </p>
+
+            <div class="classifier-card">
+
+                <label>Select Waste Item</label>
+
+                <select id="classifierInput" onchange="classifyWaste()">
+                    <option value="">Choose an item</option>
+                    <option value="plastic">Plastic Bottle</option>
+                    <option value="paper">Newspaper</option>
+                    <option value="glass">Glass Bottle</option>
+                    <option value="metal">Metal Can</option>
+                    <option value="ewaste">Old Electronic Device</option>
+                </select>
+
+                <div id="classifierResult">
+                    Your result will appear here.
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Right Side -->
+        <div class="classifier-info">
+
+            <div class="classifier-icon">♻️</div>
+
+            <h3>Dispose Waste Responsibly</h3>
+
+            <p>
+                Choose the correct category to understand
+                how different waste items should be disposed of.
+            </p>
+
+            <div class="classifier-tips">
+
+                <div>♻️ <span>Recycle reusable materials</span></div>
+
+                <div>🗑️ <span>Use the correct waste bin</span></div>
+
+                <div>🌱 <span>Reduce unnecessary waste</span></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 EcoTrack | Smart Waste Management</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

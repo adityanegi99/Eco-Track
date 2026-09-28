@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoTrack - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">🌱 EcoTrack</div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="report.html">Report Waste</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="classifier.html">Classifier</a>
+            <a href="sdg.html">SDGs</a>
+            <a href="challenges.html">Challenges</a>
+        </div>
+    </nav>
+
+    <!-- Dashboard -->
+    <section class="section dashboard">
+
+        <div class="dashboard-layout">
+
+            <!-- Left Side -->
+            <div class="dashboard-main">
+
+                <h2>Waste Management Dashboard</h2>
+                <p>Monitor waste reports across the campus.</p>
+
+                <div class="stats">
+
+                    <div class="stat-card">
+                        <h3 id="totalReports">0</h3>
+                        <p>Total Reports</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3 id="plasticReports">0</h3>
+                        <p>Plastic</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3 id="recycledReports">0</h3>
+                        <p>E-Waste Reports</p>
+                    </div>
+
+                </div>
+
+                <div class="chart-card">
+                    <h3>Waste Categories</h3>
+
+                    <div class="bar">
+                        <span>Plastic</span>
+                        <div class="bar-fill plastic-bar"></div>
+                    </div>
+
+                    <div class="bar">
+                        <span>Paper</span>
+                        <div class="bar-fill paper-bar"></div>
+                    </div>
+
+                    <div class="bar">
+                        <span>Organic</span>
+                        <div class="bar-fill organic-bar"></div>
+                    </div>
+
+                    <div class="bar">
+                        <span>E-Waste</span>
+                        <div class="bar-fill ewaste-bar"></div>
+                    </div>
+
+                    <div id="recentReports">
+                        <h3>Recent Reports</h3>
+                        <p>No reports yet.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Right Side -->
+            <div class="dashboard-info">
+
+                <div class="dashboard-icon">📊</div>
+
+                <h3>Keep Your Campus Green</h3>
+
+                <p>
+                    Small actions can make a big difference.
+                    Follow these simple waste management practices.
+                </p>
+
+                <div class="tip">
+                    ♻️ <strong>Recycle</strong>
+                    <span>Separate recyclable materials.</span>
+                </div>
+
+                <div class="tip">
+                    🌱 <strong>Reduce</strong>
+                    <span>Avoid unnecessary waste.</span>
+                </div>
+
+                <div class="tip">
+                    🗑️ <strong>Dispose Properly</strong>
+                    <span>Use the correct waste bin.</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 EcoTrack | Smart Waste Management</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
