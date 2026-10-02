@@ -50,3 +50,10 @@ Our vision is to create a cleaner, smarter, and more sustainable campus by using
 
 
 EcoTrack is a student-developed project created to combine technology with sustainable waste management.
+🌐 Live Demo
+
+👨‍🎓 Student Login:
+https://adityanegi99.github.io/Eco-Track/login.html
+
+👨‍💼 Admin Login:
+https://adityanegi99.github.io/Eco-Track/admin-login.html
